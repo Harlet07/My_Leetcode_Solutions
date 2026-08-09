@@ -1,0 +1,6 @@
+# 1502. Can Make Arithmetic Progression From Sequence
+
+- **Difficulty:** Easy
+- **Link:** https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/
+- **Language:** java
+- **Last synced submission:** 2091218936
