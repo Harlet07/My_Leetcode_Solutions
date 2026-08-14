@@ -1,23 +1,43 @@
+// class Solution {
+//     public void swaP(int a,int b){
+//         a=a+b;
+//         b=a-b;
+//         a=a-b;
+//     }
+
+//     public int removeDuplicates(int[] nums) {
+//         int n=nums.length,exLen=1,i=0,j=1;
+//         if(n==1) return exLen;
+
+//         while(j<n){
+//             if(nums[i]!=nums[j]){
+//                 i++;
+//                 nums[i]=nums[j];
+//                 j++;
+//             }
+//             else j++;
+//         }
+
+//         return ++i;
+//     }
+// }
+
 class Solution {
-    public void swaP(int a,int b){
-        a=a+b;
-        b=a-b;
-        a=a-b;
-    }
 
-    public int removeDuplicates(int[] nums) {
-        int n=nums.length,exLen=1,i=0,j=1;
-        if(n==1) return exLen;
+    public int removeDuplicates(int[] nums) 
+    {
+        int write=1;
+        int n=nums.length;
 
-        while(j<n){
-            if(nums[i]!=nums[j]){
-                i++;
-                nums[i]=nums[j];
-                j++;
+        for(int i=0;i<n-1;i++)
+        {
+            if(nums[i]==nums[i+1])
+            {
+                continue;
             }
-            else j++;
+            nums[write]=nums[i+1];
+            write++;
         }
-
-        return ++i;
+        return write;
     }
 }
