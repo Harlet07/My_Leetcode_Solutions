@@ -1,0 +1,16 @@
+class Solution {
+    public int triangularSum(int[] nums) {
+        if(nums.length==1) return nums[0];
+        if(nums.length==2) return (nums[0]+nums[1])%10;
+        // int[] a=nums;
+        int n=nums.length;
+
+        while(n>1){
+            for(int i=0;i<n-1;i++){
+                nums[i]=(nums[i]+nums[i+1])%10;
+            }
+            n--;
+        }
+        return nums[0];
+    }
+}
